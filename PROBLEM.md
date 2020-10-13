@@ -4,7 +4,7 @@ This exercise should be completed using Test Driven Development Technique
 
   - Write Test classes in TDD approach 
   - Functionality of methods should be completed, such that all the test cases pass 
-  - Some of the requirements/hints are mentioned below
+  - Some requirements/hints are mentioned below
   
   ```
    In this problem, country names have to searched and sorted from the given input collections 
@@ -29,15 +29,33 @@ Class CountryUtility must be implemented using TDD for the following methods
              return emptySet if parameters are null or empty 
     + getCountryByCapital(Map<String, String> countries, String searchCapital) :String
               return null if parameters are null or empty 
+              
 Implement custom exception class CountryNotFoundException
 
     Throw CountryNotFoundException whenever country is not found
     
 **NOTE: ALL THE METHODS SHOULD BE IMPLEMENTED USING STREAMS API ONLY** 
-         
+ 
+- Write the test cases in the class `CountryUtilityTests`.    
+- Minimum test cases expected: 13
+- Test cases should be written for positive and negative scenarios, wherever applicable
+- Test methods should follow (given...ThenShould) naming convention.
+    - For example: `givenTwoIntegersWhenAddedThenShouldReturnSum`. If the method name is very long,then you can skip `when` part.
+- Test coverage should be 100%
+
 ## Instructions
+
 - Take care of whitespace/trailing whitespace
 - Do not change the provided class/method names unless instructed
-- Ensure your code compiles without any errors/warning/deprecations 
 - Follow best practices while coding
+
+## Code coverage 
+
+ - Run mvn test, the JaCoCo code coverage report will be generated at target/site/jacoco/*
+ - Open the target/site/jacoco/index.html file, review the code coverage report 
+ 
+            - Green – Code is tested or covered.
+            - Red – Code is not tested or covered.
+            - Yellow – Code is partially tested or covered.
+ - Make sure lines coverage must meet the minimum 90%
 
