@@ -25,7 +25,7 @@ Class CountryUtility must be implemented using TDD for the following methods
              - This method checks if the parameter `searchCountry` is present the list `countries`. The parameter `searchCountry` is case-insensitive.
              - return false if parameters are null or empty 
              - return false if the searchCountry is not found in the list countries
-             - return true if the searchCountry is not found in the list countries.
+             - return true if the searchCountry is found in the list countries.
                                 
     + sortCountries(List<String> countries):Optional<List<String>>
              - This method sorts the given list of countries in ascending order.
