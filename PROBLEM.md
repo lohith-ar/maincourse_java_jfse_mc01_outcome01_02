@@ -13,8 +13,8 @@ containing country names and capital names of countries
    - Following functionality needs to be implemented in TDD approach
    
         - search a given country from the given list of countries
-        - sort the given list of countries in ascending oeder
-        - extract distinct countries from the given list of countries and sort them in ascending order of the number of characters in country 			name
+        - sort the given list of countries in ascending order
+        - extract distinct countries from the given list of countries and sort them in ascending order of the number of characters in country name
         - search the country for a given capital from the given collection of country names and capital names
    
    - Empty and null inputs should be checked 
@@ -22,17 +22,30 @@ containing country names and capital names of countries
 Class CountryUtility must be implemented using TDD for the following methods 
 
     + searchCountry(List<String> countries, String searchCountry):boolean
-             return false if parameters are null or empty                    
+             - This method checks if the parameter `searchCountry` is present the list `countries`. The parameter `searchCountry` is case-insensitive.
+             - return false if parameters are null or empty 
+             - return false if the searchCountry is not found in the list countries
+             - return true if the searchCountry is not found in the list countries.
+                                
     + sortCountries(List<String> countries):Optional<List<String>>
-             return empty Optional if parameters are null or empty 
+             - This method sorts the given list of countries in ascending order.
+             - return empty Optional if parameters are null or empty else return optional of sorted list.
+             
     + getDistinctCountriesInUpperCaseSortedByLength(List<String> countries) :Set<String> 
-             return emptySet if parameters are null or empty 
+             - This method returns the distinct set of countries in uppercase sorted in the order of length(number of characters).
+             - return emptySet if the parameter are null or empty 
+             
     + getCountryByCapital(Map<String, String> countries, String searchCapital) :String
-              return null if parameters are null or empty 
+            - This methods returns the country name for the given capital name of country.
+            - return null if parameters are null or empty.
+            - Throw CountryNotFoundException if the country is not present.
               
 Implement custom exception class CountryNotFoundException
 
-    Throw CountryNotFoundException whenever country is not found
+    - This class extends RuntimeException.
+    - Implement constructors
+    
+   
     
 **NOTE: ALL THE METHODS SHOULD BE IMPLEMENTED USING STREAMS API ONLY** 
  
